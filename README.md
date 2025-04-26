@@ -14,3 +14,7 @@ npm i -g @nestjs/cli
 ```
 docker-componse up -d
 ```
+
+## Stack
+mongoDB
+nestjs
