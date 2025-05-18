@@ -8,12 +8,14 @@ import { EnvConfig } from './config/env.config';
 
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
+import { JoiValidationSchema } from './config/joi.validation';
 
 @Module({
   imports: [
     // Configuracion de variables de entorno
     ConfigModule.forRoot({
-      load: [EnvConfig]
+      load: [EnvConfig],
+      validationSchema: JoiValidationSchema,
     }),
     // Configuracion de archivos estaticos
     ServeStaticModule.forRoot({
