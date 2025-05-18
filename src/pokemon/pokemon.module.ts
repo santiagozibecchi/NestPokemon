@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { PokemonService } from './pokemon.service';
 import { PokemonController } from './pokemon.controller';
-import { MongooseModule } from '@nestjs/mongoose';
 import { Pokemon, PokemonSchema } from './entities/pokemon.entity';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   controllers: [PokemonController],
@@ -12,6 +13,8 @@ import { Pokemon, PokemonSchema } from './entities/pokemon.entity';
    * NestJS es altamente modular, y los módulos pueden depender unos de otros.
    */
   imports: [
+    // ConfigModule es un módulo que permite cargar variables de entorno desde un archivo .env
+    ConfigModule, // los módulos encapsulan toda la lógica
     /**
      * Para registrar un modelo de Mongoose
      * Esto es útil cuando deseas encapsular la lógica de una entidad

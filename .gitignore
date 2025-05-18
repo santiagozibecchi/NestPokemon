@@ -4,6 +4,9 @@
 /build
 /mongo
 
+# private keys
+.env
+
 # Logs
 logs
 *.log

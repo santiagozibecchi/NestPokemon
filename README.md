@@ -20,6 +20,11 @@ docker-componse up -d
 http://localhost:3000/api/v2/seed
 ```
 
+6. Correr el proyecto de nest 
+```
+yarn start:dev
+```
+
 ## Stack
 mongoDB
 nestjs
